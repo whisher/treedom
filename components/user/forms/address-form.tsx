@@ -37,6 +37,11 @@ const UserAddressForm = ({ handlerData }: UserCredentialsFormProps) => {
   };
   return (
     <form onSubmit={handleSubmit}>
+      {error && (
+        <div className="alert alert-danger" role="alert">
+          {error}
+        </div>
+      )}
       <div className="mb-3">
         <label htmlFor="street" className="form-label">
           Street
