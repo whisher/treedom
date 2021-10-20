@@ -36,7 +36,7 @@ const UserAddressForm = ({ handlerData }: UserCredentialsFormProps) => {
       });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="flex-fill" onSubmit={handleSubmit}>
       {error && (
         <div className="alert alert-danger" role="alert">
           {error}
@@ -68,8 +68,11 @@ const UserAddressForm = ({ handlerData }: UserCredentialsFormProps) => {
           {...bind}
         />
       </div>
-      <div className="text-end">
-        <button type="submit" className="btn btn-primary">
+      <div>
+        <button
+          type="submit"
+          className="btn btn-primary d-block w-100 shadow-none"
+        >
           Address
         </button>
       </div>

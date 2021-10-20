@@ -1,0 +1,65 @@
+:root {
+  --height-desktop: 300px;
+  --width-desktop: 600px;
+  --width-mobile: 300px;
+}
+.progress-container {
+  width: var(--width-mobile);
+  margin: 0 auto;
+}
+.slider-container {
+  width: var(--width-mobile);
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.8s ease-in-out;
+}
+.slider-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 var(--width-mobile);
+}
+.step-1 {
+  transform: translateX(0);
+}
+.step-2 {
+  transform: translateX(calc(var(--width-mobile) * -1));
+}
+.step-3 {
+  transform: translateX(calc(var(--width-mobile) * -2));
+}
+.step-4 {
+  transform: translateX(calc(var(--width-mobile) * -3));
+}
+@media (min-width: 992px) {
+  .progress-container {
+    width: var(--width-desktop);
+    margin: 0 auto;
+  }
+  .slider-container {
+    width: var(--width-desktop);
+    height: var(--height-desktop);
+  }
+  .slider {
+    flex-direction: column;
+  }
+  .slider-form {
+    flex: 1 0 var(--height-desktop);
+  }
+  .step-1 {
+    transform: translateY(0);
+  }
+  .step-2 {
+    transform: translateY(calc(var(--height-desktop) * -1));
+  }
+  .step-3 {
+    transform: translateY(calc(var(--height-desktop) * -2));
+  }
+  .step-4 {
+    transform: translateY(calc(var(--height-desktop) * -3));
+  }
+}
