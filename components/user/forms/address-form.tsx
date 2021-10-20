@@ -68,9 +68,14 @@ const UserAddressForm = ({ handlerData }: UserCredentialsFormProps) => {
           {...bind}
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Address
-      </button>
+      <div>
+        <button
+          type="submit"
+          className="btn btn-primary d-block w-100 shadow-none"
+        >
+          Address
+        </button>
+      </div>
     </form>
   );
 };

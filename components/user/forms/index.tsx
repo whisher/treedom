@@ -24,25 +24,42 @@ const UserForm = () => {
     setStep(step);
   };
 
+  const progress = 25 * step;
   return (
-    <div className="slider-container">
-      <div className={`slider step-${step}`}>
-        <div className="slider-form">
-          <UserCredentialsForm handlerData={onHandlerData} />
-        </div>
-        <div className="slider-form">
-          <UserDetailsForm handlerData={onHandlerData} />
-        </div>
-        <div className="slider-form">
-          <UserAddressForm handlerData={onHandlerData} />
-        </div>
-        <div className="slider-form">
-          <div>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+    <>
+      <div className="progress-container mt-3">
+        <div className="progress">
+          <div
+            style={{ width: `${progress}%` }}
+            className="progress-bar bg-primary"
+            role="progressbar"
+            aria-valuenow={progress}
+            aria-valuemin={0}
+            aria-valuemax={100}
+          >
+            {progress}%
           </div>
         </div>
       </div>
-    </div>
+      <div className="slider-container">
+        <div className={`slider step-${step}`}>
+          <div className="slider-form">
+            <UserCredentialsForm handlerData={onHandlerData} />
+          </div>
+          <div className="slider-form">
+            <UserDetailsForm handlerData={onHandlerData} />
+          </div>
+          <div className="slider-form">
+            <UserAddressForm handlerData={onHandlerData} />
+          </div>
+          <div className="slider-form">
+            <div>
+              <pre>{JSON.stringify(data, null, 2)}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

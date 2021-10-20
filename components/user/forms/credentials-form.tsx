@@ -68,9 +68,14 @@ const UserCredentialsForm = ({ handlerData }: UserCredentialsFormProps) => {
           {...bind}
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Credentials
-      </button>
+      <div>
+        <button
+          type="submit"
+          className="btn btn-primary d-block w-100 shadow-none"
+        >
+          Credentials
+        </button>
+      </div>
     </form>
   );
 };
