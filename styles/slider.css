@@ -35,7 +35,7 @@
 .step-4 {
   transform: translateX(calc(var(--width-mobile) * -3));
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .progress-container {
     width: var(--width-desktop);
     margin: 0 auto;
