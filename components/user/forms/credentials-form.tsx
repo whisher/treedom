@@ -36,7 +36,7 @@ const UserCredentialsForm = ({ handlerData }: UserCredentialsFormProps) => {
       });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="flex-fill" onSubmit={handleSubmit}>
       {error && (
         <div className="alert alert-danger" role="alert">
           {error}

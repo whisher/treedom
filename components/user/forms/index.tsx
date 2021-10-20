@@ -25,14 +25,23 @@ const UserForm = () => {
   };
 
   return (
-    <div>
-      <div>
-        <progress max="4" value={step} />
+    <div className="slider-container">
+      <div className={`slider step-${step}`}>
+        <div className="slider-form">
+          <UserCredentialsForm handlerData={onHandlerData} />
+        </div>
+        <div className="slider-form">
+          <UserDetailsForm handlerData={onHandlerData} />
+        </div>
+        <div className="slider-form">
+          <UserAddressForm handlerData={onHandlerData} />
+        </div>
+        <div className="slider-form">
+          <div>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+          </div>
+        </div>
       </div>
-      {step === 1 && <UserCredentialsForm handlerData={onHandlerData} />}
-      {step === 2 && <UserDetailsForm handlerData={onHandlerData} />}
-      {step === 3 && <UserAddressForm handlerData={onHandlerData} />}
-      {step === 4 && <div>{JSON.stringify(data, null, 2)}</div>}
     </div>
   );
 };
