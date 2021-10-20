@@ -68,9 +68,11 @@ const UserDetailsForm = ({ handlerData }: UserCredentialsFormProps) => {
           {...bind}
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Details
-      </button>
+      <div className="text-end">
+        <button type="submit" className="btn btn-primary">
+          Details
+        </button>
+      </div>
     </form>
   );
 };

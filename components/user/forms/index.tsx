@@ -23,11 +23,18 @@ const UserForm = () => {
     });
     setStep(step);
   };
-
+  const progress = 25 * step;
   return (
     <div>
-      <div>
-        <progress max="4" value={step} />
+      <div className="progress my-3">
+        <div
+          style={{ width: `${progress}%` }}
+          className="progress-bar bg-primary"
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
+        ></div>
       </div>
       {step === 1 && <UserCredentialsForm handlerData={onHandlerData} />}
       {step === 2 && <UserDetailsForm handlerData={onHandlerData} />}
