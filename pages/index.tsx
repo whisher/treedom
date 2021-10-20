@@ -4,7 +4,7 @@ import { UserForm } from "../components/user/forms";
 const Home: NextPage = () => {
   return (
     <div className="container">
-      <UserForm></UserForm>
+      <UserForm />
     </div>
   );
 };

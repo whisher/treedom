@@ -9,6 +9,7 @@ const sendAddress = (
 ): Promise<{ data: UserAddressDto }> => {
   return axios.post("/api/user/address", data);
 };
+
 export interface UserCredentialsFormProps {
   handlerData: (
     type: keyof UserFormDto,
@@ -16,6 +17,7 @@ export interface UserCredentialsFormProps {
     step: number
   ) => void;
 }
+
 const UserAddressForm = ({ handlerData }: UserCredentialsFormProps) => {
   const initialState: UserAddressDto = {
     street: "",

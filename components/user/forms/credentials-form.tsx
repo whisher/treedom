@@ -9,6 +9,7 @@ const sendCredentials = (
 ): Promise<{ data: UserCredentialsDto }> => {
   return axios.post("/api/user/credentials", data);
 };
+
 export interface UserCredentialsFormProps {
   handlerData: (
     type: keyof UserFormDto,
@@ -16,6 +17,7 @@ export interface UserCredentialsFormProps {
     step: number
   ) => void;
 }
+
 const UserCredentialsForm = ({ handlerData }: UserCredentialsFormProps) => {
   const initialState: UserCredentialsDto = {
     email: "",
